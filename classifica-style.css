@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Russo One", sans-serif;
+}
+
+body{
+    background-color: #FEF4D1;
+}
+
+h1{
+    color: #0D526F;
+    font-weight: 500;
+    margin: 15px;
+}
+
+.top{
+    font-size: 20px;
+}
+
+.top .top-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #E1F1E4;
+    margin: 15px;
+    border-radius: 10px;
+    height: 60px;
+}
+
+.top .number{
+    background-color: #38A2CC;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.top .top-card .profile{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 50%;
+}
+
+.top .top-card .profile img{
+    max-width: 20%;
+    margin-right: 10px;
+    display: inline-block;
+}
+
