@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Russo One", sans-serif;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #FEF4D1;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+#logo {
+    color: #0D526F;
+    font-weight: 500;
+    margin: 15px;
+}
+
+#immagine {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #333;
+}
+
+#descrizione {
+    color: rgb(42, 36, 36);
+    font-size: medium;
+    padding-left: 2%;
+    margin-top: 50px;
+}
+
+#introduzione {
+    font-size: medium;
+    padding-left: 2%;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 40px;
+}
+
+.titoloPuntiBonus {
+    margin-left: 15px;
+    color: green;
+}
+
+.titoloPuntiMalus {
+    margin-left: 15px;
+    color: red;
+}
+
+.valoreBonus {
+    text-align: center;
+    color: green;
+}
+
+.valoreMalus {
+    text-align: center;
+    color: red;
+}
+
+.casella {
+    background: #E1F1E4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.633);
+    width: 250px;
+    height: auto;
+    text-align: left;
+    margin-right: 10px;
+    padding: 10px 20px;
+    flex: 0 0 auto;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+    margin: 30px 0;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    max-width: 90%;
+    padding: 10px 0;
+}
+
+.freccia {
+    font-size: 22px;
+    background-color: #0D526F;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+
+

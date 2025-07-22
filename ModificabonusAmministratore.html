@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aggiunta Bonus</title>
+    <link rel="stylesheet" href="ModificabonusAmministratore-style.css">
+</head>
+<body>
+
+        <div id="logo">
+             <h1>Ciao admin benvenuto !</h1>
+        <img src="logo.png" alt="immagine logo" id="immagine">
+    </div>
+
+
+   <h2 id="bonus">Aggiungi Bonus</h2>
+
+       <div class="slider-container">
+        <button class="freccia sinistra" onclick="scrollBonus(-1)">←</button>
+        <div class="slider" id="sliderBonus">
+            <div class="casella">
+                <h3 class="valoreBonus">
+                     <label>
+                        <input type="checkbox" class="checkbox">
+                     </label>
+                    
+                   +5</h3>
+                <ul >
+                    
+                     <li>gara di verticali in acqua</li>
+                     <li>seppellirsi sotto la sabbia</li>
+                     <li>buttare qualcuno in acqua (benedetta dove si tocca)</li>
+                     <li>vestirsi machati</li>
+                     <li>qualsisi scherzo</li>
+                     <li>dormire in spiaggia</li>
+                     <li>bere alcol</li>
+                     <li>vincere ad un torneo</li>
+                </ul>
+            </div>
+            <div class="casella">
+                <h3 class="valoreBonus">           
+                  <label>
+                   <input type="checkbox" class="checkbox">
+                  </label>
+                +10</h3>
+                <ul>
+                    <li>bagno vestito</li>
+                    <li>se ti chiedono l'insta</li>
+                    <li>treccine</li>
+                    <li>farsi truccare</li>
+                    <li>avvistare una stella cadente</li>
+
+                </ul>
+            </div>
+            <div class="casella">
+                <h3 class="valoreBonus">
+                    
+                 <label>
+                   <input type="checkbox" class="checkbox">
+                  </label>
+                +15</h3>
+                <ul>
+                   <li>chiedere insta</li>
+                   <li>fare gli auguri a sconosciuti </li>
+                   <li>fare bagno di notte</li>
+                   <li>mangiare un kebab alle 3 di notte</li>
+                   <li>fare uno sport da spiaggia (Es: sup)</li>
+                </ul>
+            </div>
+            <div class="casella">
+                <h3 class="valoreBonus"> 
+
+                 <label>
+                   <input type="checkbox" class="checkbox">
+                 </label>
+                                 
+                 +20</h3>
+                <ul>
+                   <li>caduta divertente(spontanea)</li>
+                   <li>24h senza dormire </li>
+                   <li>far partire balli di gruppo</li>
+                   <li>rimorchiare qualcuno</li>
+                </ul>
+            </div>
+            <div class="casella">
+                <h3 class="valoreBonus">
+                    
+                 <label>
+                   <input type="checkbox" class="checkbox">
+                 </label>
+                    
+                 +50</h3>
+                <ul>
+
+                   <li>baciare uno sconosciuto </li>
+                   <li>fare una foto con una celebrità </li>
+                   <li>farsi un vero tatuaggio</li>
+                   <li>fare un bagno nudo</li>
+                   <li>scroccare in giro</li>
+                   <li>farsi portare in barca da uno sconosciuto</li>
+
+
+                </ul>
+            </div>
+        </div>
+        <button class="freccia destra" onclick="scrollBonus(1)">→</button>
+    </div>
+
+    <h2 class="concorrente">Al concorrente :</h2>
+
+    <div class="boxbianca">
+        <div class="dueBottoni">
+        <button class="bottone" onclick="toggleDropdown()"> Lista partecipanti ▾</button>
+        <button class="conferma">Conferma</button>
+        </div>
+          <div class="dropdown-content" id="listaPartecipanti">
+         <a href="#">Antonio</a>
+         <a href="#">Errico</a>
+         <a href="#">Faby</a>
+         <a href="#">Benny</a>
+         <a href="#">Franco</a>
+         <a href="#">Mattia D'A</a>
+         <a href="#">Federica M.</a>
+         <a href="#">Federica S.</a>
+         <a href="#">MDG</a>
+         <a href="#">Enrico</a>
+         <a href="#">Pier</a>
+  </div>
+    </div>
+
+       <h2 id="malus">Aggiungi Malus</h2>
+    <div class="slider-container">
+        <button class="freccia sinistra" onclick="scrollMalus(-1)">←</button>
+        <div class="slider" id="sliderMalus">
+            <div class="casella">
+                <h3 class="valoreMalus">
+                    
+                  <label>
+                   <input type="checkbox" class="checkbox">
+                  </label> 
+                    
+                 -5</h3>
+                <ul>
+                   <li>essere ripreso mentre russi</li>
+                   <li>litigare</li>
+                   <li>perdere ad un torneo</li>
+                   <li>uscire con sandali/ciabatte con calzini</li>
+                </ul>
+            </div>
+            <div class="casella">
+                <h3 class="valoreMalus">
+                    
+                    
+                  <label>
+                   <input type="checkbox" class="checkbox">
+                  </label>   
+                 
+                 -10</h3>
+                <ul>
+                    <li>essere buttati in acqua</li>
+                    <li>pallonata in faccia</li>
+                </ul>
+            </div>
+            <div class="casella">
+                <h3 class="valoreMalus">
+                    
+                  <label>
+                   <input type="checkbox" class="checkbox">
+                  </label>
+                    
+                 -15</h3>
+                <ul>
+                    <li>scottarsi al sole</li>
+                    <li>punto da una medusa</li>
+                </ul>
+            </div>
+            <div class="casella">
+                <h3 class="valoreMalus">
+                         
+                  <label>
+                   <input type="checkbox" class="checkbox">
+                  </label>
+
+                 -20</h3>
+                <ul>
+                    <li>rimanere senza voce</li>
+                    <li>vomitare</li>
+                </ul>
+            </div>
+            <div class="casella">
+                <h3 class="valoreMalus">
+                    
+                  <label>
+                   <input type="checkbox" class="checkbox">
+                  </label>
+                    
+                 -50</h3>
+                <ul>
+                    <li>essere cacciati dai buttafuori</li>
+                    <li>ammalarsi</li>
+                </ul>
+            </div>
+            <div class="casella">
+                <h3 class="valoreMalus">
+                    
+                  <label>
+                   <input type="checkbox" class="checkbox">
+                  </label>
+                    
+                 -100</h3>
+                <ul>
+                    <li>lasciarsi con il proprio/a fidanzato/a</li>
+                </ul>
+            </div>
+        </div>
+        <button class="freccia destra" onclick="scrollMalus(1)">→</button>
+    </div>
+
+        <h2 class="concorrente">Al concorrente :</h2>
+
+      <div class="boxbianca">
+
+      <div class="dueBottoni">
+        <button class="bottoneMalus" onclick="toggleDropdownMalus()"> Lista partecipanti ▾</button>
+        <button class="conferma2">Conferma</button>
+      </div>
+          <div class="dropdown-content" id="listaPartecipantiMalus">
+         <a href="#">Antonio</a>
+         <a href="#">Errico</a>
+         <a href="#">Faby</a>
+         <a href="#">Benny</a>
+         <a href="#">Franco</a>
+         <a href="#">Mattia D'A</a>
+         <a href="#">Federica M.</a>
+         <a href="#">Federica S.</a>
+         <a href="#">MDG</a>
+         <a href="#">Enrico</a>
+         <a href="#">Pier</a>
+
+  </div>
+    </div>
+
+    <script>
+        function scrollBonus(direction) {
+            const slider = document.getElementById("sliderBonus");
+            const scrollAmount = 260;
+            slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+
+        function scrollMalus(direction) {
+            const slider = document.getElementById("sliderMalus");
+            const scrollAmount = 260;
+            slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+    </script>
+
+
+<script>
+  function toggleDropdown() {
+    document.getElementById("listaPartecipanti")
+      .classList.toggle("show");
+  }
+
+  // Quando clicchi su un nome, aggiorna il bottone
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("#listaPartecipanti a");
+    const bottone = document.querySelector(".bottone");
+
+    links.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault(); // evita che salti la pagina
+        bottone.textContent = this.textContent;
+        document.getElementById("listaPartecipanti").classList.remove("show");
+      });
+    });
+  });
+
+  // Chiudi il menu se clicchi fuori
+  window.onclick = function(event) {
+    if (!event.target.matches('.bottone')) {
+      const dropdowns = document.getElementsByClassName("dropdown-content");
+      for (const dd of dropdowns) {
+        dd.classList.remove('show');
+      }
+    }
+  }
+</script>
+
+
+<script>
+  // Mostra/Nasconde il menu Malus
+  function toggleDropdownMalus() {
+    document.getElementById("listaPartecipantiMalus")
+      .classList.toggle("show");
+  }
+
+  // Imposta il nome cliccato nel bottone
+  document.addEventListener("DOMContentLoaded", function () {
+    const malusLinks = document.querySelectorAll("#listaPartecipantiMalus a");
+    const malusBtn = document.querySelector(".bottoneMalus");
+
+    malusLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        malusBtn.textContent = this.textContent;
+        document.getElementById("listaPartecipantiMalus").classList.remove("show");
+      });
+    });
+  });
+
+  // Chiude il menu se clicchi fuori
+  window.onclick = function (event) {
+    if (!event.target.matches('.bottoneMalus')) {
+      const dropdown = document.getElementById("listaPartecipantiMalus");
+      dropdown.classList.remove('show');
+    }
+  }
+</script>
+
+
+
+
+</body>
+</html>
