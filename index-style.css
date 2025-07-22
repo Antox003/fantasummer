@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap');
 
+
 * {
     padding: 0;
     margin: 0;
@@ -29,7 +30,26 @@ body::before {
     z-index: -1;
 }
 
-#logo {
+header{
+
+    background-color:#0D526F ;
+}
+
+.logo{
+
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.logo img{
+
+    max-width: 5%;
+    
+}
+
+
+#titolo {
     color: #0D526F;
     font-weight: 500;
     margin: 15px;
