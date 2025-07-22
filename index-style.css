@@ -33,13 +33,16 @@ body::before {
 header{
 
     background-color:#0D526F ;
+    display: flex;
+    align-items: center;
+    
 }
 
 .logo{
 
     display: flex;
     align-items: center;
-    margin: 5px;
+    padding: 5px;
 }
 
 .logo img{
@@ -48,6 +51,25 @@ header{
     
 }
 
+.logo h2{
+
+    color: white;
+}
+
+nav button{
+
+    border-radius: 10px;
+    background-color: white;
+    padding: 8px 23px;
+   
+   
+}
+
+nav button a{
+
+    color: #0D526F;
+    text-decoration: none;
+}
 
 #titolo {
     color: #0D526F;
@@ -142,6 +164,9 @@ header{
     height: 40px;
     cursor: pointer;
 }
+
+
+
 
 
 

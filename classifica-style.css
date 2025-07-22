@@ -10,6 +10,49 @@ body{
     background-color: #FEF4D1;
 }
 
+
+header{
+
+    background-color:#0D526F ;
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo{
+
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.logo img{
+
+    max-width: 5%;
+    
+}
+
+.logo h2{
+
+    color: white;
+}
+
+nav button{
+
+    border-radius: 10px;
+    background-color: white;
+    padding: 8px 23px;
+   
+   
+}
+
+nav button a{
+
+    color: #0D526F;
+    text-decoration: none;
+}
+
+
 h1{
     color: #0D526F;
     font-weight: 500;
