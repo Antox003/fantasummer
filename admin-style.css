@@ -41,19 +41,17 @@ header{
     color: white;
 }
 
-nav button{
+nav{
 
-    border-radius: 10px;
-    background-color: white;
-    padding: 8px 23px;
-   
-   
+    display: flex;
+    margin: 5px;
 }
 
-nav button a{
 
-    color: #0D526F;
+nav a{
+    color: #ffffff;
     text-decoration: none;
+    margin: 5px;
 }
 
 
@@ -241,5 +239,16 @@ body::before {
     display: flex;
     align-items: center;
     gap: 22px; /* spazio tra i due */
+
+}
+
+@media only screen and(max-width: 1000px) {
+    
+
+.logo img{
+
+    max-width: 80%;
+    
+}
 
 }
