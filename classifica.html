@@ -27,6 +27,51 @@
 
     </header>
 
+     <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+    import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCJhZvF7eyEgupmF6cQd7NsvmeflUctrzo",
+      authDomain: "fantasummer-f7e4a.firebaseapp.com",
+      projectId: "fantasummer-f7e4a",
+      storageBucket: "fantasummer-f7e4a.firebasestorage.app",
+      messagingSenderId: "80899635536",
+      appId: "1:80899635536:web:82c7d5908c605699dd5455"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    // Quando la pagina è caricata
+    window.addEventListener("DOMContentLoaded", async () => {
+      const partecipantiRef = collection(db, "partecipanti");
+      const snapshot = await getDocs(partecipantiRef);
+
+      const data = [];
+      snapshot.forEach(doc => {
+        const d = doc.data();
+        data.push({ nome: d.nome, punteggio: d.punteggio || 0 });
+      });
+
+      // Ordina per punteggio decrescente
+      data.sort((a, b) => b.punteggio - a.punteggio);
+
+      // Scrivi i dati nel DOM
+      const cards = document.querySelectorAll(".top-card");
+      for (let i = 0; i < cards.length; i++) {
+        const card = cards[i];
+        const partecipante = data[i];
+        if (partecipante) {
+          card.querySelector("p").textContent = partecipante.nome;
+          card.querySelector(".point").textContent = partecipante.punteggio.toString().padStart(3, "0");
+        } else {
+          card.style.display = "none"; // nasconde slot vuoti
+        }
+      }
+    });
+  </script>
+
 
 
     <h1>CLASSIFICA</h1>
@@ -38,7 +83,7 @@
                 <img src="./img/user.png" alt="">
                 <p>Toni</p>
             </div>
-            <div class="point">000</div>
+            <div class="point"></div>
         </div>
 
         <div class="top-card">
@@ -47,7 +92,7 @@
                 <img src="./img/user.png" alt="">
                 <p>Errico</p>
             </div>
-            <div class="point">000</div>
+            <div class="point"></div>
         </div>
 
         <div class="top-card">

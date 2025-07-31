@@ -28,9 +28,95 @@
     </header>
 
 
+
+
         <div id="titolo">
              <h1>Benvenuto admin!</h1>
     </div>
+
+    <script type="module">
+
+      var ipt = prompt("Inserisci la password");
+      if(ipt!="estate2025"){
+        window.location.href = "classifica.html";
+      }
+
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+      import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyCJhZvF7eyEgupmF6cQd7NsvmeflUctrzo",
+        authDomain: "fantasummer-f7e4a.firebaseapp.com",
+        projectId: "fantasummer-f7e4a",
+        storageBucket: "fantasummer-f7e4a.firebasestorage.app",
+        messagingSenderId: "80899635536",
+        appId: "1:80899635536:web:82c7d5908c605699dd5455"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      // Calcolo bonus/malus
+      function getSelectedBonus() {
+        const bonuses = document.querySelectorAll("#sliderBonus .checkbox:checked");
+        let total = 0;
+        bonuses.forEach(box => {
+          const value = parseInt(box.closest(".valoreBonus").textContent.trim().replace('+', ''));
+          if (!isNaN(value)) total += value;
+        });
+        return total;
+      }
+
+      function getSelectedMalus() {
+        const malus = document.querySelectorAll("#sliderMalus .checkbox:checked");
+        let total = 0;
+        malus.forEach(box => {
+          const value = parseInt(box.closest(".valoreMalus").textContent.trim().replace('-', ''));
+          if (!isNaN(value)) total += value;
+        });
+        return total;
+      }
+
+      function clearCheckboxes() {
+        document.querySelectorAll('.checkbox:checked').forEach(cb => cb.checked = false);
+      }
+
+      // Conferma bonus
+      document.querySelector(".conferma").addEventListener("click", async () => {
+        const nome = document.querySelector(".bottone").textContent.trim();
+        const punti = getSelectedBonus();
+        if (nome === "Lista partecipanti ▾" || punti === 0) return alert("Seleziona un nome e almeno un bonus.");
+
+        const ref = doc(db, "partecipanti", nome);
+        try {
+          const snap = await getDoc(ref);
+          const current = snap.exists() ? snap.data().punteggio : 0;
+          await setDoc(ref, { nome, punteggio: current + punti }, { merge: true });
+          alert(`Bonus assegnato a ${nome}: +${punti} punti`);
+          clearCheckboxes();
+        } catch (err) {
+          console.error("Errore bonus:", err);
+        }
+      });
+
+      // Conferma malus
+      document.querySelector(".conferma2").addEventListener("click", async () => {
+        const nome = document.querySelector(".bottoneMalus").textContent.trim();
+        const punti = getSelectedMalus();
+        if (nome === "Lista partecipanti ▾" || punti === 0) return alert("Seleziona un nome e almeno un malus.");
+
+        const ref = doc(db, "partecipanti", nome);
+        try {
+          const snap = await getDoc(ref);
+          const current = snap.exists() ? snap.data().punteggio : 0;
+          await setDoc(ref, { nome, punteggio: current - punti }, { merge: true });
+          alert(`Malus assegnato a ${nome}: -${punti} punti`);
+          clearCheckboxes();
+        } catch (err) {
+          console.error("Errore malus:", err);
+        }
+      });
+    </script>
 
 
    <h2 id="bonus">Aggiungi Bonus</h2>
@@ -134,7 +220,7 @@
         <button class="conferma">Conferma</button>
         </div>
           <div class="dropdown-content" id="listaPartecipanti">
-         <a href="#">Antonio</a>
+         <a href="#">Toni</a>
          <a href="#">Errico</a>
          <a href="#">Faby</a>
          <a href="#">Benny</a>
@@ -245,7 +331,7 @@
         <button class="conferma2">Conferma</button>
       </div>
           <div class="dropdown-content" id="listaPartecipantiMalus">
-         <a href="#">Antonio</a>
+         <a href="#">Toni</a>
          <a href="#">Errico</a>
          <a href="#">Faby</a>
          <a href="#">Benny</a>
