@@ -36,6 +36,8 @@
 
     <script type="module">
 
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
       var ipt = prompt("Inserisci la password");
       if(ipt!="estate2025"){
         window.location.href = "classifica.html";
